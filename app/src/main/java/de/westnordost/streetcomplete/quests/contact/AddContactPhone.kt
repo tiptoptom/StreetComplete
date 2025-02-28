@@ -19,7 +19,7 @@ class AddContactPhone : OsmFilterQuestType<String>() {
          or healthcare
          or """.trimIndent() +
          PLACES_FOR_CONTACT_QUESTS +
-        "\n) and !phone and !contact:phone and !contact:mobile and !brand and name"
+        "\n) and !phone and !contact:phone and !contact:mobile and !brand and (name or operator)"
 
     override val changesetComment = "Add phone number"
     override val wikiLink = "Key:phone"
